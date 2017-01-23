@@ -1,0 +1,60 @@
+<html>
+<head>
+
+<meta http-equiv=Content-Type content="text/html; charset=<%charset%>">
+
+<style TYPE="text/css">
+<!--
+BODY { background: #000040; }
+.para1 { margin-top: -42px; margin-left: 145px; margin-right: 10px; font-family: "font2, Arial"; font-size: 30px; line-height: 35px; text-align: left; color: #E1E1E1; }
+.para2 { margin-top: 15px; margin-left: 15px; margin-right: 50px; font-family: "font1, Arial Black"; font-size: 50px; line-height: 40px; text-align: left; color: #004080; }
+-->
+</style>
+
+<title>Album List</title>
+
+</head>
+
+<!-- HEADER -->
+
+<body BGCOLOR="#000080" topmargin="0" leftmargin="0" text="#FFFFFF">
+<div align="center"><div CLASS="para2" align="center"><p>WINAMP</p></div>
+<div CLASS="para1" align="center"><p>albumlist</p></div></div>
+
+<hr align="left" width="90%" noshade size="1" color="#FFBF00">
+
+<!-- STATS -->
+
+<div align="right">
+<table border="0" cellspacing="0" cellpadding="0" width="98%">
+<tr>
+  <td><small><small>
+    <font face="Arial" color="#FFBF00"><%totalalbums%></font><font color="#409FFF" face="Arial"> albums in list, average album length: </font> <font face="Arial" color="#FFBF00"><%averagelength%></font>
+
+	<br>
+	
+	<font color="#409FFF" face="Arial">Total album length: </font>
+	<font face="Arial" color="#FFBF00"><%totallengthhrs%></font><font color="#409FFF" face="Arial"> hours </font>
+	<font face="Arial" color="#FFBF00"><%totallengthmin%></font><font color="#409FFF" face="Arial"> minutes </font>
+	<font face="Arial" color="#FFBF00"><%totallengthsec%></font><font color="#409FFF" face="Arial"> seconds </font>
+	  
+	<br>
+
+	<font color="#409FFF" face="Arial">Right-click <a href="file://<%outfilename%>">here</a> to save this HTML file.</font>
+  </small></small></td>
+</tr>
+</table>
+</div>
+
+<!-- LIST -->
+
+<blockquote><p><font color="#FFBF00" face="Arial"><big>Albums:</big></font><ul><font face="Arial" color="#FFFFFF"><small>
+<%liststart%>
+<%albumindex%>. <%displayname%> (<%albumlength%>)<BR>
+<%listend%>
+</font></ul></blockquote>
+
+<hr align="left" width="90%" noshade size="1" color="#FFBF00">
+
+</body>
+</html>

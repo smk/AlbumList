@@ -1,0 +1,9 @@
+/.cvsignore////*////
+/PlayRandomAlbum.cpp////*////
+/PlayRandomAlbum.dsp////*////
+/PlayRandomAlbum.rc////*////
+/PlayRandomAlbum.vcproj////*////
+/PlayRandomAlbum.ver////*////
+/StdAfx.cpp////*////
+/StdAfx.h////*////
+/resource.h////*////

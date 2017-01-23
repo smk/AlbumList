@@ -1,0 +1,12 @@
+/.cvsignore////////
+/OGG.cpp////////
+/OGG.def////////
+/OGG.dsp////////
+/OGG.h////////
+/OGG.rc////////
+/OGG.ver////////
+/StdAfx.cpp////////
+/StdAfx.h////////
+/resource.h////////
+/OGG.vcproj////*////
+/OggInfo.h////////

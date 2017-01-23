@@ -1,0 +1,9 @@
+/.cvsignore////////
+/PlayAlbumName.cpp////////
+/PlayAlbumName.dsp////////
+/PlayAlbumName.rc////////
+/PlayAlbumName.ver////////
+/StdAfx.cpp////////
+/StdAfx.h////////
+/resource.h////////
+/PlayAlbumName.vcproj////*////

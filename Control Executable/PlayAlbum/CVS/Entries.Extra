@@ -1,0 +1,10 @@
+/.cvsignore////////
+/PlayAlbum.cpp////////
+/PlayAlbum.dsp////////
+/PlayAlbum.rc////////
+/PlayAlbum.ver////////
+/ReadMe.txt////////
+/StdAfx.cpp////////
+/StdAfx.h////////
+/resource.h////////
+/PlayAlbum.vcproj////*////

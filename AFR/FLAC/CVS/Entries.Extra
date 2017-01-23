@@ -1,0 +1,12 @@
+/.cvsignore////////
+/FLAC.cpp////////
+/FLAC.def////////
+/FLAC.h////////
+/FLAC.rc////////
+/FLAC.ver////////
+/StdAfx.cpp////////
+/StdAfx.h////////
+/resource.h////////
+/FLAC.dsp////////
+/FLAC.vcproj////*////
+/FlacInfo.h////////

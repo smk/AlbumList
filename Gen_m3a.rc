@@ -1,0 +1,604 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIG_v290 DIALOGEX 0, 0, 196, 196
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",WS_GROUP | WS_TABSTOP,0,
+                    0,195,196
+END
+
+IDD_CONFIG_v500 DIALOGEX 0, 0, 272, 246
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",WS_GROUP | WS_TABSTOP,0,
+                    0,271,246
+END
+
+IDD_CONFIGABOUT_v290 DIALOGEX 0, 0, 185, 180
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "About:",IDC_STATIC,9,6,176,8
+    LTEXT           "Album List for Winamp v%ld.%ld (build %ld)\n(c) 1999-2007, Safai Ma (safai.ma@gmail.com)\nVisit homepage at http://albumlist.sourceforge.net",
+                    IDC_VERSION_STATIC,7,31,174,30
+    CONTROL         "Check for new versions of Album List at startup",
+                    IDC_CHECK_UPDATE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,7,162,168,10
+END
+
+IDD_CONFIGHISTORY_v500 DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Revision History:",IDC_STATIC,7,6,245,8
+    EDITTEXT        IDC_EDIT,7,21,246,201,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL | 
+                    NOT WS_TABSTOP
+END
+
+IDD_CONFIGPATH DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Directories to search",IDC_STATIC,6,3,253,94,WS_GROUP
+    LISTBOX         IDC_PATHLIST,14,16,236,54,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD,14,75,71,14,WS_GROUP
+    PUSHBUTTON      "&Remove",IDC_REMOVE,96,75,71,14,WS_GROUP
+    PUSHBUTTON      "Re&move All",IDC_REMOVEALL,178,75,71,14,WS_GROUP
+    GROUPBOX        "File types to search",IDC_STATIC,6,103,253,36,WS_GROUP
+    EDITTEXT        IDC_FILETYPEEDIT,14,116,236,14,ES_AUTOHSCROLL | WS_GROUP
+    GROUPBOX        "Options",IDC_STATIC,6,144,253,80,WS_GROUP
+    CONTROL         "Quick scan at startup",IDC_SCAN_AT_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,157,236,10
+    CONTROL         "Scan sub-directories",IDC_SCANSUBDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,170,236,10
+    CONTROL         "Scan &CD-ROMs",IDC_ADD_CDROM,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,14,183,236,10
+    CONTROL         "Ignore all &playlists",IDC_IGNORE_M3U,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,196,115,10
+    CONTROL         "Playlist only",IDC_M3U_ONLY,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,137,196,113,10
+    CONTROL         "&Ignore root playlists only",IDC_IGNORE_M3U_ROOT,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,209,236,10
+END
+
+IDD_CONFIGOPTION_v500 DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,6,3,253,62,WS_GROUP
+    LTEXT           "This page allows you to configure the playback options. It also allows your to configure the ""extra"" features that comes with Album List.",
+                    IDC_STATIC,13,17,237,24
+    LTEXT           "These settings affect all Album List profiles.",
+                    IDC_STATIC,13,49,237,12
+    GROUPBOX        "Playback options",IDC_STATIC,6,72,253,94,WS_GROUP
+    CONTROL         "&Always sort files by filename",IDC_SORTFILENAME,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,85,236,10
+    CONTROL         "&Loop when reaches the beginning or end of the list",
+                    IDC_LOOPNEXTPREV,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,13,98,236,10
+    CONTROL         "&Keep the current song playing",IDC_KEEPSONGPLAYING,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,111,
+                    236,10
+    CONTROL         "&Enqueue when double-clicking or pressing ENTER",
+                    IDC_ENQUEUE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,13,124,236,10
+    CONTROL         "Automatic advance to &next album",IDC_AUTOADVANCE,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,137,
+                    157,10
+    CONTROL         "Random",IDC_RANDOM,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,179,137,70,10
+    CONTROL         "&Display warning for long operations.",
+                    IDC_PLAYALL_WARNING,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,13,150,151,10
+    LTEXT           ">",IDC_PLAYALL_GT,168,150,8,8
+    EDITTEXT        IDC_PLAYALL_LIMIT,179,149,23,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER | WS_GROUP
+    LTEXT           "albums",IDC_PLAYALL_ALBUM,205,151,44,8
+    GROUPBOX        "Extras",IDC_STATIC,6,170,253,53,WS_GROUP
+    CONTROL         "Show Album &Cover when playing an album",IDC_SHOWCOVER,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,182,
+                    236,10
+    CONTROL         "&Resume playback on Winamp startup",IDC_RESUME,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,196,236,10
+    CONTROL         "&Main window lightning bolt opens Album list instead of about box",
+                    IDC_LIGHTNING_BOLT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,210,236,10
+END
+
+IDD_CONFIGNAMING DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Naming Style",IDC_STATIC,6,3,253,105,WS_GROUP
+    LTEXT           "Directory Style:",IDC_STATIC,14,18,96,8
+    COMBOBOX        IDC_STYLE,126,16,124,111,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Use ID3 &Tag if present",IDC_USEID3,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,36,236,10
+    LTEXT           "Note: If no id3 tag is found albumlist will extract information from the directory instead",
+                    IDC_STATIC,22,50,226,19
+    CONTROL         "Smart &renaming for multi CD albums",IDC_MULTIDISCFIX,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,72,
+                    236,10
+    LTEXT           "&Multi CD directory names:",IDC_STATIC,14,90,124,8
+    EDITTEXT        IDC_MULTIDISCNAMES,150,88,100,14,ES_AUTOHSCROLL
+    GROUPBOX        "Options",IDC_STATIC,6,116,253,45,WS_GROUP
+    CONTROL         "Strip &underscores",IDC_FIXTITLES,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,131,236,10
+    CONTROL         "Ignore 'The' when sorting albums",IDC_IGNORETHE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,145,236,10
+    GROUPBOX        "File Info (Global)",IDC_STATIC,6,169,253,47
+    CONTROL         "Use &built-in file info readers",IDC_USEBUILTIN,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,184,236,10
+    CONTROL         "Get file info through &Winamp",IDC_USEWAEINFO,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,14,200,236,10
+END
+
+IDD_ALBUMLIST DIALOG DISCARDABLE  0, 0, 198, 93
+STYLE WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Play",IDC_PLAYBTN,"Button",BS_OWNERDRAW | WS_GROUP,0,76,
+                    38,11
+    CONTROL         "List1",IDC_ALBUMLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SHAREIMAGELISTS | LVS_OWNERDATA | WS_GROUP | 
+                    WS_TABSTOP,0,0,197,56
+    CONTROL         "Enqueue",IDC_ENQUEUEBTN,"Button",BS_OWNERDRAW | 
+                    WS_GROUP,46,76,38,11
+    CONTROL         "0 items",IDC_TOTALALBUMTIME,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | SS_CENTERIMAGE | WS_GROUP,150,76,45,11
+    CONTROL         "<",IDC_PREVALBUMBTN,"Button",BS_OWNERDRAW | WS_GROUP,89,
+                    76,11,11
+    CONTROL         ">",IDC_NEXTALBUMBTN,"Button",BS_OWNERDRAW | WS_GROUP,
+                    109,76,11,11
+END
+
+IDD_CONFIGLANGUAGE_v500 DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,6,3,253,78,WS_GROUP
+    LTEXT           "This page allows you to configure language related settings.",
+                    IDC_STATIC,13,17,237,24
+    LTEXT           "You can create your own language file by copying and editing one of the language files (*.al) in the Language directory.",
+                    IDC_STATIC,13,49,237,24
+    GROUPBOX        "Translation",IDC_STATIC,6,89,253,72,WS_GROUP
+    LTEXT           "Select the language you want to use:",IDC_STATIC,13,106,
+                    236,9
+    COMBOBOX        IDC_LANGUAGE,13,123,142,77,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "&Edit",IDC_EDIT,164,123,62,14,WS_GROUP
+    LTEXT           "Translated by:",IDC_TRANSLATED_BY,13,144,236,8
+    GROUPBOX        "Encoding",IDC_STATIC,6,170,253,54,WS_GROUP
+    LTEXT           "Album List",IDC_STATIC,13,186,104,10
+    COMBOBOX        IDC_AL_LANG,122,183,127,83,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Playlist Editor",IDC_STATIC_PE,13,203,104,10
+    COMBOBOX        IDC_PE_LANG,122,201,127,93,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+END
+
+IDD_ALBUMINFO DIALOG DISCARDABLE  0, 0, 265, 166
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Album Info"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "List &Name:",IDC_STATIC,12,9,53,8
+    EDITTEXT        IDC_LISTNAME,70,7,181,14,ES_AUTOHSCROLL
+    LTEXT           "&Artist:",IDC_STATIC,12,25,53,10
+    EDITTEXT        IDC_ARTIST,70,23,181,14,ES_AUTOHSCROLL
+    LTEXT           "A&lbum:",IDC_STATIC,12,42,53,10
+    EDITTEXT        IDC_ALBUM,70,39,181,14,ES_AUTOHSCROLL
+    LTEXT           "&Year:",IDC_STATIC,12,57,53,8
+    EDITTEXT        IDC_YEAR,70,55,181,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "&Genre:",IDC_STATIC,12,74,53,8
+    EDITTEXT        IDC_GENRE,70,71,181,14,ES_AUTOHSCROLL
+    LTEXT           "Path:",IDC_STATIC,12,89,53,10
+    EDITTEXT        IDC_PATH,70,87,181,14,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_TABSTOP
+    LTEXT           "# of Tracks:",IDC_STATIC,12,105,53,9
+    EDITTEXT        IDC_FILECOUNT,70,103,57,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    WS_GROUP | NOT WS_TABSTOP
+    LTEXT           "# of CDs:",IDC_STATIC,136,105,53,9
+    EDITTEXT        IDC_MULTIDISC,194,103,57,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Length:",IDC_STATIC,12,121,53,9
+    EDITTEXT        IDC_LENGTH,70,119,57,14,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "OK",IDOK,145,146,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,201,146,50,14,WS_GROUP
+END
+
+IDD_CONFIGPROFILE_v500 DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,6,3,253,78,WS_GROUP
+    LTEXT           "This page allows you to create, configure, and delete your Album List profiles.",
+                    IDC_STATIC,13,17,237,24
+    LTEXT           "Each profile consist of a set of parameters that are independent from each other. With multiple profiles, you can have your music in a window while your videos in another.",
+                    IDC_STATIC,13,49,237,24
+    GROUPBOX        "Select a profile to configure:",IDC_STATIC,6,89,253,103
+    CONTROL         "List1",IDC_PROFILELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_EDITLABELS | LVS_NOCOLUMNHEADER | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_GROUP | WS_TABSTOP,16,
+                    106,231,58
+    PUSHBUTTON      "&New",IDC_NEW,16,170,50,14,WS_GROUP
+    PUSHBUTTON      "&Rename",IDC_RENAME,76,170,50,14,WS_GROUP
+    PUSHBUTTON      "&Edit",IDC_EDIT,136,170,50,14,WS_GROUP
+    PUSHBUTTON      "&Delete",IDC_DELETE,196,170,50,14,WS_GROUP
+    CONTROL         "Update MSN Messenger's ""What I'm Listening To""",
+                    IDC_MSN,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,
+                    6,198,252,10
+    CONTROL         "Integrate with Media Library (requires restart of winamp)",
+                    IDC_INTEGRATEML,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,6,213,252,10
+END
+
+IDD_PREFERENCE DIALOGEX 0, 0, 278, 274
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Profile Preferences"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",WS_GROUP | WS_TABSTOP,3,
+                    4,271,246
+    PUSHBUTTON      "Close",IDOK,224,256,50,14
+END
+
+IDD_CONFIGABOUT_v500 DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Album List for Winamp v%ld.%ld (build %ld)\nCopyright (c) 1999-2007, Safai Ma (safai.ma@gmail.com)\nVisit homepage at http://albumlist.sourceforge.net",
+                    IDC_VERSION_STATIC,7,10,245,186
+    CONTROL         "Check for new versions of Album List at startup",
+                    IDC_CHECK_UPDATE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,9,210,240,10
+END
+
+IDD_CONFIGHISTORY_v290 DIALOGEX 0, 0, 185, 180
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Revision History:",IDC_STATIC,7,6,137,8
+    EDITTEXT        IDC_EDIT,7,21,178,154,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | WS_HSCROLL | 
+                    NOT WS_TABSTOP
+END
+
+IDD_CONFIGLANGUAGE_v290 DIALOGEX 0, 0, 185, 180
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Translation",-1,4,6,181,72,WS_GROUP
+    LTEXT           "Select the language you want to use:",-1,11,23,163,9
+    COMBOBOX        IDC_LANGUAGE,11,40,142,77,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Translated by:",IDC_TRANSLATED_BY,11,61,162,8
+    GROUPBOX        "Encoding",-1,4,87,181,54,WS_GROUP
+    LTEXT           "Album List",-1,11,103,62,10
+    COMBOBOX        IDC_AL_LANG,75,100,101,83,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+    LTEXT           "Playlist Editor",-1,11,120,55,10
+    COMBOBOX        IDC_PE_LANG,75,118,101,93,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+END
+
+IDD_CONFIGOPTION_v290 DIALOGEX 0, 0, 185, 180
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Playback options",-1,4,6,181,79,WS_GROUP
+    CONTROL         "&Always sort files by filename",IDC_SORTFILENAME,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,18,173,10
+    CONTROL         "&Loop when reaches the beginning or end of the list",
+                    IDC_LOOPNEXTPREV,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,10,31,173,10
+    CONTROL         "&Keep the current song playing",IDC_KEEPSONGPLAYING,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,44,
+                    173,10
+    CONTROL         "&Enqueue when double-clicking or pressing ENTER",
+                    IDC_ENQUEUE,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,10,57,173,10
+    CONTROL         "Automatic advance to &next album",IDC_AUTOADVANCE,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,70,
+                    173,10
+    GROUPBOX        "Extras",-1,4,93,181,47,WS_GROUP
+    CONTROL         "Show Album &Cover when playing an album",IDC_SHOWCOVER,
+                    "Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,107,
+                    173,10
+    CONTROL         "&Resume playback on Winamp startup",IDC_RESUME,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,10,122,173,10
+END
+
+IDD_CONFIGPROFILE_v290 DIALOGEX 0, 0, 185, 180
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Select a profile to configure:",-1,6,8,179,134
+    PUSHBUTTON      "&New",IDC_NEW,16,118,43,14,WS_GROUP
+    PUSHBUTTON      "&Edit",IDC_EDIT,73,118,43,14,WS_GROUP
+    PUSHBUTTON      "&Delete",IDC_DELETE,130,118,43,14,WS_GROUP
+    CONTROL         "List1",IDC_PROFILELIST2,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_EDITLABELS | LVS_NOCOLUMNHEADER | 
+                    LVS_NOSORTHEADER | WS_BORDER | WS_GROUP | WS_TABSTOP,16,
+                    24,158,87
+END
+
+IDD_JUMPTOALBUM DIALOG FIXED IMPURE  0, 0, 258, 207
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Jump to album"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Search for text",IDC_SEARCH_STATIC,7,7,244,30
+    EDITTEXT        IDC_SEARCHTEXT,13,17,231,14,ES_AUTOHSCROLL | WS_GROUP
+    LISTBOX         IDC_RESULTLIST,7,43,244,139,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_HSCROLL | WS_GROUP | WS_TABSTOP
+    PUSHBUTTON      "&Play",IDC_PLAY,7,186,78,14,WS_GROUP
+    PUSHBUTTON      "&Enqueue",IDC_ENQUEUE,90,186,78,14,WS_GROUP
+    PUSHBUTTON      "&Close",IDCANCEL,173,186,78,14,WS_GROUP
+END
+
+IDD_CONFIGCOVER DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Size",IDC_STATIC,6,3,253,31,WS_GROUP
+    LTEXT           "&Width:",IDC_STATIC,12,16,44,8
+    EDITTEXT        IDC_COVER_WIDTH,62,14,40,14,ES_NUMBER
+    CONTROL         "Spin1",IDC_COVER_WIDTH_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,106,13,10,14
+    LTEXT           "x",IDC_STATIC,116,16,14,8
+    LTEXT           "&Height:",IDC_STATIC,132,16,44,8
+    EDITTEXT        IDC_COVER_HEIGHT,185,14,40,14,ES_NUMBER
+    CONTROL         "Spin2",IDC_COVER_HEIGHT_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,229,13,10,14
+    GROUPBOX        "Border",IDC_STATIC,6,36,253,29,WS_GROUP
+    LTEXT           "W&idth:",IDC_STATIC,12,49,44,8
+    EDITTEXT        IDC_BORDER_WIDTH,62,46,40,14,ES_NUMBER
+    CONTROL         "Spin2",IDC_BORDER_WIDTH_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,106,45,10,14
+    CONTROL         "&Color:",IDC_BORDER_COLOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,120,48,57,10
+    PUSHBUTTON      "...",IDC_COLORCHOOSER,185,45,40,14,BS_BITMAP | WS_GROUP
+    GROUPBOX        "Search Options",IDC_STATIC,6,69,253,141
+    CONTROL         "Search &additional folder for covers (in ""artist - album.ext"" format)",
+                    IDC_USE_ALT_FOLDER,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,13,82,240,10
+    EDITTEXT        IDC_ALTERNATE_FOLDER,26,96,198,14,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    PUSHBUTTON      "...",IDC_BROWSE2,229,96,17,14,WS_GROUP
+    CONTROL         "Search album folder",IDC_SEARCH_ALBUM_DIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,116,79,10
+    EDITTEXT        IDC_SEARCH_ORDER,104,115,120,14,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    CONTROL         "&Search inside mp3 (id3v2) and m4a (iTunes) files",
+                    IDC_INSIDE_MP3,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,13,132,240,10
+    CONTROL         "&Override default cover",IDC_OVERRIDE_DEF_COVER,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,147,118,10,
+                    WS_EX_TRANSPARENT
+    EDITTEXT        IDC_DEFAULT_COVER,26,161,198,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,229,161,17,14,WS_GROUP
+    CONTROL         "&Draw title over cover",IDC_DRAWTITLE,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,13,180,85,10
+    RTEXT           "&Color:",IDC_TEXT_COLOR_STATIC,104,181,44,8
+    PUSHBUTTON      "...",IDC_TEXTCOLORCHOOSER,153,178,40,14,BS_BITMAP | 
+                    WS_GROUP
+    CONTROL         "Sha&dow",IDC_SHADOW,"Button",BS_AUTOCHECKBOX | WS_GROUP | 
+                    WS_TABSTOP,198,181,51,10
+    CONTROL         "Cache covers",IDC_CACHE_COVERS,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,13,195,240,10
+    LTEXT           "* settings require restart of winamp to take effect",
+                    IDC_STATIC,6,214,253,8
+END
+
+IDD_CONFIGABOUT_ML DIALOGEX 0, 0, 260, 230
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Album List for Winamp v%ld.%ld\nCopyright (c) 1999-2007, Safai Ma, All Rights Reserved.\n\nBuild %ld/%s (%s %s)\n\nContact Information:\nemail safai.ma@gmail.com\nWebsite: http://albumlist.sourceforge.net",
+                    IDC_VERSION_STATIC,7,10,192,82
+END
+
+IDD_PROFILENAME DIALOG DISCARDABLE  0, 0, 186, 52
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Enter profile name"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PROFILE_EDIT,7,7,172,14,ES_AUTOHSCROLL | WS_GROUP
+    DEFPUSHBUTTON   "OK",IDOK,40,31,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,31,50,14
+END
+
+IDD_TABBED_UI DIALOGEX 0, 0, 272, 246
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",TCS_OWNERDRAWFIXED | 
+                    WS_GROUP | WS_TABSTOP,0,0,271,246
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""Gen_m3a.ver""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONFIG_v500, DIALOG
+    BEGIN
+        RIGHTMARGIN, 192
+        BOTTOMMARGIN, 191
+    END
+
+    IDD_ALBUMLIST, DIALOG
+    BEGIN
+        VERTGUIDE, 20
+    END
+
+    IDD_ALBUMINFO, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 165
+    END
+
+    IDD_PREFERENCE, DIALOG
+    BEGIN
+        RIGHTMARGIN, 272
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_PROFILENAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 45
+    END
+
+    IDD_TABBED_UI, DIALOG
+    BEGIN
+        RIGHTMARGIN, 192
+        BOTTOMMARGIN, 191
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR_AL ACCELERATORS DISCARDABLE 
+BEGIN
+    "E",            IDC_EXPORT_ALBUM_LIST,  VIRTKEY, CONTROL, NOINVERT
+    "M",            IDC_NEXT_ALBUM,         VIRTKEY, CONTROL, NOINVERT
+    "N",            IDC_PREV_ALBUM,         VIRTKEY, CONTROL, NOINVERT
+    "O",            IDC_EXPLORE,            VIRTKEY, CONTROL, NOINVERT
+    "P",            IDC_SHOW_PROPERTIES,    VIRTKEY, CONTROL, NOINVERT
+    "R",            IDC_RELOAD_ALBUM,       VIRTKEY, CONTROL, NOINVERT
+    "S",            IDC_SHOW_ALBUM_COVER,   VIRTKEY, CONTROL, NOINVERT
+    "V",            IDC_TOGGLE_VIEW,        VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          IDC_SHOW_ALBUM_INFO,    VIRTKEY, NOINVERT
+    VK_F3,          IDC_JUMP_TO_ALBUM,      VIRTKEY, NOINVERT
+    VK_F5,          IDC_QUICK_SCAN_ALBUM,   VIRTKEY, NOINVERT
+    VK_NUMPAD0,     IDC_KEYPAD0,            VIRTKEY, NOINVERT
+    VK_NUMPAD1,     IDC_KEYPAD1,            VIRTKEY, NOINVERT
+    VK_NUMPAD2,     IDC_KEYPAD2,            VIRTKEY, NOINVERT
+    VK_NUMPAD3,     IDC_KEYPAD3,            VIRTKEY, NOINVERT
+    VK_NUMPAD4,     IDC_KEYPAD4,            VIRTKEY, NOINVERT
+    VK_NUMPAD5,     IDC_KEYPAD5,            VIRTKEY, NOINVERT
+    VK_NUMPAD6,     IDC_KEYPAD6,            VIRTKEY, NOINVERT
+    VK_NUMPAD7,     IDC_KEYPAD7,            VIRTKEY, NOINVERT
+    VK_NUMPAD8,     IDC_KEYPAD8,            VIRTKEY, NOINVERT
+    VK_NUMPAD9,     IDC_KEYPAD9,            VIRTKEY, NOINVERT
+    VK_RETURN,      IDC_PLAY_MENU,          VIRTKEY, NOINVERT
+    VK_RETURN,      IDC_ENQUEUE_N_PLAY,     VIRTKEY, CONTROL, NOINVERT
+    VK_RETURN,      IDC_ENQUEUE_AFTER_CUR,  VIRTKEY, ALT, NOINVERT
+    VK_RETURN,      IDC_ENQUEUE_ALBUM,      VIRTKEY, SHIFT, NOINVERT
+    "W",            IDC_WRITE_PLAYLIST,     VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COVER               BITMAP  DISCARDABLE     "Cover.bmp"
+IDB_ICON_AL_H           BITMAP  DISCARDABLE     "icon_al_h.bmp"
+IDB_ICON_AL             BITMAP  DISCARDABLE     "icon_al.bmp"
+IDB_COVER_MASK          BITMAP  DISCARDABLE     "Cover_mask.bmp"
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "Gen_m3a.ver"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

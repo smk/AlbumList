@@ -1,0 +1,372 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+// JavaScript Image slideshow
+// Patrick Fitzgerald, fitz@csicop.org
+// This code can be found on the following web page:
+// http://www.csicop.org/~fitz/www/slideshow/
+
+// There are two objects defined in this file:
+// "slide" - contains all the information for a single slide
+// "slideshow" - consists of multiple slide objects and runs the slideshow
+
+//==================================================
+// First define the "slide" object.
+//
+function slide(image_url,link,text,window,attr)
+{
+  // Public variables
+
+  // image object for the slide
+  this.image = new Image()
+  this.image.src = image_url
+
+  // URL to open when the slide is clicked
+  this.link = link
+
+  // Text that displays for the slide (optional)
+  this.text = text
+
+  // The following variables are optional.
+  // If you want the link to open in a new window set these.
+
+  
+  // Name of the target window ("_blank")
+  this.window_name = window
+
+  // Attributes for the target window
+  // see window.open() for values
+  // ("width=300,height=200")
+  this.window_attr = attr
+
+  // Public methods
+  this.hotlink = slide_hotlink
+}
+
+function slide_hotlink()
+{
+  // If a window name was specified, open a new window
+  if (this.window_name) {
+
+    // If window attributes are specified, use them to open the new window
+    if (this.window_attr) {
+      window.open(this.link, this.window_name, this.window_attr);
+
+    // If window attributes are not specified, do not use them
+    // (this will copy the attributes from the originating window)
+    } else {
+      window.open(this.link, this.window_name);
+    }
+
+  // Else open the hotlink in the current window
+  } else {
+
+    location.href = this.link
+  }
+}
+
+
+//==================================================
+// Next define the "slideshow" object
+//
+function slideshow( slideshowname )
+{
+  // Public
+
+  // Name of this object
+  // (required if you want your slideshow to auto-play)
+  // For example, "SLIDES1"
+  this.name = slideshowname
+
+  // The image object on your HTML page
+  // for example, document.images.SLIDES1IMG
+  this.image
+
+  // The textarea object on your HTML page (optional)
+  // for example, document.SLIDES1FORM.SLIDES1TEXT
+  this.textarea
+
+   // The number of milliseconds to pause between slides
+  this.timeout = 3000
+
+  // These are private variables
+  this.slides = new Array()
+  this.current = 0
+  this.timeoutid = 0
+  this.scaleid = 0
+
+  // Public methods
+  this.add_slide = slideshow_add_slide
+  this.set_image = slideshow_set_image
+  this.set_textarea = slideshow_set_textarea
+
+  this.play = slideshow_play
+  this.pause = slideshow_pause
+
+  this.next = slideshow_next
+  this.previous = slideshow_previous
+
+  this.get_text = slideshow_get_text
+  this.display_text = slideshow_display_text
+  this.hotlink = slideshow_hotlink
+
+  this.tomte = slideshow_tomte
+  this.scale = slideshow_scale
+
+  // Private methods
+  this.loop = slideshow_loop
+  this.valid_image = slideshow_valid_image
+}
+
+
+function slideshow_add_slide( slide )
+// for example:
+// SLIDES1.add_slide(new slide("s1.jpg", "link.html", "text"))
+{
+  // If this version of JavaScript does not allow us to
+  // change images, then we can't do the slideshow.
+  if (!document.images)
+    return
+
+  var i = this.slides.length;
+
+  this.slides[i] = slide
+}
+
+
+function slideshow_set_textarea( textareaobject )
+{
+  // Set the "textarea" property of the slideshow object.
+  this.textarea = textareaobject
+
+  // Initialize the text in the textarea
+  this.display_text();
+}
+
+
+function slideshow_set_image( imageobject )
+{
+  // If this version of JavaScript does not allow us to
+  // change images, then we can't do the slideshow.
+  if (!document.images)
+    return
+
+  // Set the "image" property of the slideshow object.
+  this.image = imageobject
+}
+
+
+function slideshow_valid_image()
+// Returns 1 if a valid image has been set for the slideshow
+{
+  if (!this.image)
+  {
+    // Stop the slideshow
+    this.pause
+
+    // Display an error message
+    window.status = "Error: slideshow image not initialized for " + this.name
+        
+    return 0
+  }
+  else
+    return 1
+}
+
+function slideshow_hotlink()
+//
+// windowattributes can be:
+// width=n,height=n,resizable=yes or no,scrollbars=yes or no,
+// toolbar=yes or no,location=yes or no,directories=yes or no,
+// status=yes or no,menubar=yes or no,copyhistory=yes or no
+{
+  this.slides[ this.current ].hotlink()
+}
+
+
+function slideshow_next( )
+{
+  if (! this.valid_image()) return;
+
+  // Increment the image number
+  if (this.current < this.slides.length - 1)
+    this.current++
+  else
+    this.current = 0
+
+  // Change the image.
+  this.image.src = this.slides[ this.current ].image.src
+
+  // Change the text
+  this.display_text()
+  this.scale()
+}
+
+
+function slideshow_previous( )
+{
+  if (! this.valid_image()) return;
+
+  // Decrement the image number
+  if (this.current > 0)
+    this.current--
+  else
+    this.current = this.slides.length - 1
+
+  // Change the image.
+  this.image.src = this.slides[ this.current ].image.src
+
+  // Change the text
+  this.display_text()
+  this.scale()
+}
+
+
+function slideshow_display_text(text)
+{
+  // If a textarea has been specified,
+  // then this function changes the text displayed in it
+  if (this.textarea) {
+
+    if (text) {
+      this.textarea.value = text
+    } else {
+      this.textarea.value = this.slides[ this.current ].text
+    }
+  }
+}
+
+
+function slideshow_get_text()
+{
+  return(this.slides[ this.current ].text)
+}
+
+
+function slideshow_loop( )
+{
+  // Go to the next image
+  this.next( )
+  this.scale( )
+
+  // Keep playing the slideshow
+  this.play( )
+}
+
+function slideshow_play(timeout)
+{
+  // Make sure we're not already playing
+  this.pause();
+
+  // If a new timeout was specified (optional)
+  // set it here
+  if (timeout) {
+    this.timeout = timeout
+  }
+
+  // After the timeout, call this.loop()
+  this.timeoutid = setTimeout( this.name + ".loop()", this.timeout)
+}
+
+function slideshow_pause( )
+{
+  if (this.timeoutid != 0)
+  {
+    clearTimeout(this.timeoutid)
+    this.timeoutid = 0
+  }
+}
+
+function slideshow_tomte( )
+{
+  this.scaleid = setTimeout( this.name + ".scale()", 50)
+}
+
+function slideshow_scale( )
+{
+  if (this.scaleid != 0)
+  {
+    clearTimeout(this.scaleid)
+    this.scaleid = 0
+  }
+
+  var ih = this.slides[ this.current ].image.height
+  var iw = this.slides[ this.current ].image.width
+
+  var h = (document.body.offsetWidth - 43) * ih / iw
+
+  if (h > (document.body.offsetHeight - 38 - 24 * (this.slides.length > 1)))
+  {
+    this.image.width = (document.body.offsetHeight - 38 - 24 * (this.slides.length > 1)) * iw / ih
+    this.image.height = (document.body.offsetHeight - 38 - 24 * (this.slides.length > 1))
+  }
+  else
+  {
+    this.image.width = document.body.offsetWidth - 43
+    this.image.height = h
+  }
+
+  if (this.image.width < 30)
+  {
+    this.image.width = 30
+  }
+  if (this.image.height < 30)
+  {
+    this.image.height = 30
+  }
+}
+
+SLIDES = new slideshow("SLIDES")
+<%liststart%>
+SLIDES.add_slide(new slide("file:///<%slidepic%>"))
+<%listend%>
+//-->
+</SCRIPT>
+
+<STYLE>
+BODY{
+ scrollbar-arrow-color: #ffffff;
+ scrollbar-shadow-color:#777777;
+ scrollbar-track-color: #000000;
+ scrollbar-face-color:#000000;
+ scrollbar-highlight-color:#cccccc;
+ scrollbar-3dlight-color:#000000;
+ scrollbar-darkshadow-color:#000000;
+ margin-top: 5;
+ margin-bottom: 3;
+ margin-right: 3;
+ margin-left: 3;
+}
+
+INPUT{
+ background-color: #000000;
+ color:#ffffff;
+ border-top-color: #cccccc;
+ border-left-color: #cccccc;
+ border-bottom-color: #777777;
+ border-right-color: #777777;
+}
+
+</STYLE>
+</HEAD><BODY scroll="no" bgcolor="<%backgroundcolor%>"><FORM NAME=SLIDESFORM><CENTER>
+<IMG onClick=SLIDES.tomte() NAME=SLIDESIMG SRC="file:///<%slidepic0%>" BORDER=0 ALT="">
+<SCRIPT LANGUAGE="JavaScript1.1">
+<!--
+if (SLIDES.slides.length - 1)
+{
+ document.write("<BR><INPUT TYPE=button VALUE=start onClick=SLIDES.next();SLIDES.play()>");
+ document.write("<INPUT TYPE=button VALUE=stop onClick=SLIDES.pause()>");
+ document.write("<INPUT TYPE=button VALUE=' &lt ' onClick=SLIDES.previous();SLIDES.pause()>");
+ document.write("<INPUT TYPE=button VALUE=' &gt ' onClick=SLIDES.next();SLIDES.pause()></FORM>");
+ SLIDES.set_image(document.images.SLIDESIMG)
+ SLIDES.tomte() 
+ SLIDES.play()
+}
+else
+{
+ SLIDES.set_image(document.images.SLIDESIMG)
+ SLIDES.tomte() 
+}
+//-->
+</SCRIPT></CENTER></BODY></HTML>

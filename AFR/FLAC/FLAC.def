@@ -1,0 +1,10 @@
+; FLAC.DEF : Declares the module parameters for the DLL.
+
+LIBRARY      "FLAC"
+DESCRIPTION  'FLAC Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	Install
+	GetExtension
+	CreateFileInfo

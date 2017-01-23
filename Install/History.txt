@@ -1,0 +1,186 @@
+Album List for Winamp v2.07
+===========================
+Copyright © 1999-2007 Safai Ma (safai.ma@gmail.com)
+
+v2.07 August 25, 2007
+     Incorporated changes from Stefan Kudwien (cover cache)
+     Added support for unsynch frames and data length for id3v2.4
+     Added support for UTF-8 in id3v2.4
+     Added unicode support
+     Added album artist support
+     Added library send to support
+     Added play random album control executable
+
+v2.06 October 6, 2006
+     Added 2 custom default covers to install package
+     Added about page to ml tree item
+     Added cover caching
+     Added support for genre (tags only)
+     Added option to change cover search order
+     Added option for drawing title over 'default' cover
+     Added support for id3v2.2 PIC frame
+     Added support for 'Part of Set' tag reading
+     Added support for winamp's multiple profiles
+     Added save album list after quick scan
+     Updated installer to provide previous install settings
+     Updated multi disc album handling
+     Updated Translations:
+       French (by Eric)
+       German (by Lion12)
+     Fixed preference not showing up all the time (in ML mode)
+     Fixed preference crashing in Winamp 5.3
+     Fixed not saving configs when running under kmplayer
+     Fixed cover not refreshing when multiple profiles
+     Fixed scanning in hidden/system folders (such as c:\recycled)
+     Fixed problem with shutting down Windows without closing Winamp
+
+v2.05 January 29, 2006
+     Added Play and Enqueue buttons to the Jump to Album dialog
+     Added four more Enqueue options
+     Added support for id3v2.2 tags
+     Added search alternate folder for covers
+     Added support MSN Messenger "What I'm Listening To"
+     Added support for reading png files
+     Added scan option "playlist files only"
+     Fixed not saving columns (multi-profile + ML integration)
+
+v2.04 October 30, 2005
+     Added cover reading for iTunes style m4a/aac files
+     Added show full/relative path option for the path column
+     Added show label option for cover view
+     Added quick search by typing in the names
+     Added options to customize default cover (Nicolas GIROD)
+     Added 'rename' button to profile page
+     Added album cover config page
+     Added user confirmation before doing lengthy operations (Nicolas GIROD)
+     Updated cover view to try parent folder of multi-disc albums
+     Fixed menu entry with classic skins
+     Fixed not drawing 'W' properly if it is the first letter
+
+v2.03 October 2, 2005
+     Updated cover view to provide smoother scrolling
+     Updated Danish translation by Hans Frederik Ross Nielsen
+     Fixed not being able to close the Album List window
+     Fixed crash with certain ID3 tags
+
+v2.02 September 22, 2005
+     Added support to embed inside media library
+     Added %albumcover% to the export variables list
+     Added profile renaming to the config page
+     Updated Translations:
+       German (by Lion12)
+     Updated the cover border to be fixed size
+     Updated method to indicate current album
+     Fixed drag & drop on Winamp 5.09
+     Fixed 'Lightning Bolt' not work after deleting a profile
+     Fixed not reading wma track numbers properly
+     Fixed playing next album instead of stop (if stopped within 1s of play)
+     Fixed bug causing DL to crash
+     Fixed not working on Win9x
+
+v2.01 December 13, 2004
+     Added option to use 'Lightning Bolt' to show/hide Album List
+     Added "Play random album by artist"
+     Added border to the current playing album's cover
+     Added support for covers inside MP3
+     Added support for NxS Thinger (icon by Lion12)
+     Updated album cover resizing method
+     Updated Translations:
+       Polish (by MelmaC MCTM)
+       Japanese (by Toshiya Matsuo)
+     Updated default values and show preference for the 1st time
+     Updated various artists name generation
+     Updated control executables to work with the current profile
+     Fixed not saving settings when Windows shuts down
+     Fixed generated wrong %albumcount% value in cover.htt
+     Fixed list not updated when MP3CDs are inserted and removed
+     Fixed Global HotKey names are wrong in other languages
+     Fixed 'write playlist' writing VA instead of the artist name
+
+v2.0 September 28, 2004
+     Sneak Peek: Cover view
+     Updated Translations: Dutch (by Nuke Nike)
+     Added support for "Playlist Separator"
+     Added option to hide the list header in details view
+     Added option to hide the status bar at the bottom
+     Added Ctrl+M & Ctrl+N for next & previous album
+     Added Alt+Left+Click to enqueue
+     Added "Enqueue and play"
+     Added "Sort by artist name then year"
+     Added numeric keypad support
+     Changed sorting to be case insensitive
+     Fixed minor bug in generated HTML list
+     Fixed global hotkeys not going to the correct profile 
+     Fixed dirstyle misbehaving ("...\Artist - Album - Year")
+
+v2.0 rc2 August 25, 2004
+     Added more global hotkeys
+       "AL: Play previous album (different artist)"
+       "AL: Play next album (different artist)"
+       "AL: Jump to album"
+     Fixed dirstyle crash ("...\Artist - Year - Album", "...\Artist - Album - Year")
+     Fixed not updating the list position when playing an album
+     Fixed restoring the wrong auto advance profile
+     Fixed auto-hide header jumps back to the highlighted item
+     Fixed list header drawing glitch
+     Fixed resuming playback even when the playlist had changed
+
+v2.0 rc1 May 1, 2004
+     Updated readme (finally)
+     Updated Translations: Catalan (by Xavier Giró), Russian (by NeSe)
+     Added preliminary free format MP3 info reading (Free Format MP3=1)
+     Added more global hotkeys
+       "AL: Show/Hide Album List"
+       "AL: Play random album"
+     Search path will not be considered when generating display name
+     Removed directory changes when reading M3U files 
+     Restrict year detection to [1900..2100] in directory styles
+     Fixed MP3 file info reading when ID3v2 tag is bigger than 200kb
+     Fixed scrollbars do not work on multi-monitor setup
+     Fixed always adding the "Name" column after restart
+     Fixed graphics glitch in the first column
+
+v2.0 b3 April 9, 2004
+     Updated installer to NSIS2 (final)
+     Better font size support (linked with PE fontsize for now)
+     Better auto-hide header
+     Fixed MP3 file info reading when ID3v2 tags are not present
+
+v2.0 b2 March 19, 2004
+     Create default profile for first timers
+     Added more columns (album name, artist name, path)
+     Added support to re-arrange headers
+     Added sort history
+     Added status display (total album time)
+     Added support to get file info through Winamp
+     Better random play
+     Fixed not restoring auto advance profile
+     Fixed id3v2.3 tags (and added preliminary id3v2.4 support)
+     Fixed jumping back to 1st track when "keep song playing" is on
+     Fixed mis-treating some albums as various artists/misc
+
+v2.0 b1 March 4, 2004
+     Added drag & drop support
+     Fixed playing 1st track twice when "keep song playing" is on
+     Fixed "auto detect" naming style
+     Fixed problem with ignoring playlists
+
+v2.0 pr3 March 1, 2004
+     Added check for update
+     Added auto advance to a random album
+     Added edit button to the language page
+     Added auto hide headers in the list
+     Added keyboard shortcut
+     Added jump to album dialog
+     Changed the translation file format (old format still works)
+     Fixed album/artist names with '-' in them
+     Fixed "..\Artist\Year - Album" directory style
+
+v2.0 pr2 February 26, 2004
+     Packaged with NSIS2
+     Added option to show/hide album index
+     Added translations support (but all language files are out of date)
+     Fixed '&' in album names
+
+v2.0 pr1 February 25, 2004
+     First Release for Winamp 5
